@@ -24,8 +24,6 @@ jobs:
       env:
         AUTOBOOKING_SESSION_COOKIE: ${{ secrets.AUTOBOOKING_SESSION_COOKIE }}
         AUTOBOOKING_DESK_ID: ${{ secrets.AUTOBOOKING_DESK_ID }}
-        AUTOBOOKING_TELEGRAM_BOT_TOKEN: ${{ secrets.AUTOBOOKING_TELEGRAM_BOT_TOKEN }}
-        AUTOBOOKING_TELEGRAM_CHAT_ID: ${{ secrets.AUTOBOOKING_TELEGRAM_CHAT_ID }}
       run: |
         kotlinc Main.kt -include-runtime -d main.jar
         java -jar main.jar checkin
